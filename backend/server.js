@@ -79,7 +79,7 @@ const server = http.createServer((req, res) => {
 				res.statusCode = 500;
 				res.end(errorHTML);
 			} else {
-				const mediaType = mediaTypes[filePath.split('.').pop()];
+				let mediaType = mediaTypes[filePath.split('.').pop()];
       
 				if (!mediaType) {
 					mediaType = 'text/plain';

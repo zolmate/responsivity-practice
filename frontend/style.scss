@@ -1,0 +1,72 @@
+body{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+    background-color: white;
+}
+
+#root{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    section{
+        position: relative;
+        min-height: 100vh;
+        padding: 80px 20px 0;
+        background-color: #f2f2f2;
+        border-bottom: 4px solid white;
+
+        h2{ // fontos, hogy a tól-ig értékeknél ne legyen ütközés (400-401px, 801px)
+            color: darkcyan;
+
+            span{
+                transition: color 1s;
+            }
+
+            @media (max-width: 400px){
+                font-size: 25px;
+
+                span{
+                    color: red;
+                } //már bent vagyok a section.h2-n belül
+                
+            }
+            @media (min-width: 401px) and (max-width: 800px){
+                font-size: 50px;
+
+                span{
+                    color: green;
+                }
+            }
+            
+            @media (min-width: 801px){
+                font-size: 100px;
+
+
+            }
+            }
+        button{
+            position: absolute;
+            width: calc(100% - 80px);
+            max-width: 400px;
+            height: 60px;
+            margin: 40px;
+            right: 0;
+            bottom: 0;
+
+            background-color: black;
+            color: cadetblue;
+
+        }
+    }
+}
+
+footer{
+    min-height: 400px;
+}
